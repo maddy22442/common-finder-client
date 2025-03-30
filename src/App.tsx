@@ -49,7 +49,7 @@ function App() {
     files.forEach(file => formData.append('files', file));
     
     try {
-      const response = await fetch('http://localhost:3000/api/find-common', {
+      const response = await fetch('https://common-finder-server.vercel.app/api/find-common', {
         method: 'POST',
         body: formData,
         headers: { 'Accept': 'application/json' }
